@@ -1,5 +1,7 @@
 <script>
-
+function awaitOnload(elt) {
+  return new Promise((res) => (elt.onload = () => res(elt)));
+}
   function loadFrame(url, name) {
   const frame = document.createElement("iframe");
   frame.name = name;
